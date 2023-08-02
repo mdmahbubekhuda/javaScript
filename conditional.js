@@ -45,6 +45,20 @@ else {
     console.log('main condition is false');
 }
 
+// switch
+let color = ' ';
 
-
+switch(color){
+    case 'green':
+        console.log('you are green');
+        break;
+    case 'black':
+        console.log('you are black');
+        break;
+    case 'white':
+        console.log('you are white');
+        break;
+    default:
+        console.log('im blue la lald dlalaldl lad dallad da');
+}
 

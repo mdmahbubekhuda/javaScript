@@ -43,7 +43,19 @@ for (i = 10; i >= 1; i--) {
 }
 
 
+// for in loop
+let shoppingCart = {
+    books: 3,
+    sunglass: 1,
+    keyboard: 5,
+    mouse: 1,
+    pen: 25,
+};
 
+for (let keys in shoppingCart) {
+    let values = shoppingCart[keys];
+    console.log(keys, values);
+}
 
 
 

@@ -47,3 +47,9 @@ for (i = 0; i < shoppingCartKeys.length; i++) {
     let values = shoppingCartValues[i];
     console.log(keys, values);
 }
+
+// another method (for in loop)
+for (let propertyName in shoppingCart){
+    let values = shoppingCart[propertyName];
+    console.log(propertyName, values);
+}
