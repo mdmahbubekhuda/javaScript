@@ -47,10 +47,3 @@ for (i = 0; i < shoppingCartKeys.length; i++) {
     let values = shoppingCartValues[i];
     console.log(keys, values);
 }
-
-
-
-
-
-
-
