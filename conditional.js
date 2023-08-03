@@ -45,7 +45,7 @@ else {
     console.log('main condition is false');
 }
 
-// switch
+// switch (faster version of if-else)
 let color = ' ';
 
 switch(color){
@@ -62,3 +62,7 @@ switch(color){
         console.log('im blue la lald dlalaldl lad dallad da');
 }
 
+// ternary conditional operator
+let isMan = true;
+const ternary = isMan===true ? 'You are a man' : 'You are a boy';
+console.log(ternary);
