@@ -11,7 +11,7 @@ console.log(arrayName.length);
 console.log(arrayName[1]); //array index
 
 // set element's value by index
-arrayName[1]='Faraz';
+arrayName[1] = 'Faraz';
 console.log(arrayName);
 
 // to find out index of an array element
@@ -37,11 +37,25 @@ console.log(arrayName);
 let poppedElement = arrayName.pop();
 console.log(poppedElement);
 
-// array slice
+// slice() -syntax => array.slice(start, end) 
 let number = [0, 1, 2, 3, 4, 5];
 let firstPartOfNumber = number.slice(0, 5);
 console.log(firstPartOfNumber);
 
+// splice() -syntax => array.splice(index, howmany, item1, ....., itemX)
+let splice = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+splice.splice(0, 5); // only to remove elements
 
+splice.splice(1, 0, 123, 987); // added 2 new elements
+
+console.log(splice);
+
+// array validation
+let obj = {
+    name: 'RnK',
+    sex: 'male'
+}
+console.log(Array.isArray(splice)); // returns true
+console.log(Array.isArray(obj)); // returns false
 
 

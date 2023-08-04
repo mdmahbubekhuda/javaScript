@@ -5,6 +5,13 @@
 // // function call
 // functionName();
 
+// Four types of function are -
+// 1. parameter return;
+// 2. no parameter return;
+// 3. parameter no return;
+// 4. no parameter no return;
+
+
 // funtion parameter & argument
 function functionName(parameter) {
     console.log('argument value is passed to parameter:', parameter);

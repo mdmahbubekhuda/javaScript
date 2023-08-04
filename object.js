@@ -12,10 +12,15 @@ let myName = objectName.name; // get key name in a variable
 objectName.name = 'rnk'; // set key value
 console.log(objectName.name);
 
-// alternate way to get keys (knwon) and set values - using array
+// alternate way to get keys (knwon) and set values - using bracket notation
 let myHeight = objectName['height']; // get key in variable
 objectName['height'] = "6 feet"; // set value
 console.log(myHeight);
+
+// another way - to get and set keys and values -using variable
+let myMarks = 'marks';
+objectName[myMarks] = 100;
+console.log(objectName);
 
 // when property/key names are unknown
 let objectProperties = Object.keys(objectName); //returns keys in an array
@@ -23,11 +28,6 @@ console.log(objectProperties);
 // to get the 'unknown' key values of objects
 let objectValues = Object.values(objectName); //returns values in an array
 console.log(objectValues);
-
-// another way - to get and set keys and values
-let myMarks = 'marks';
-objectName[myMarks] = 100;
-console.log(objectName);
 
 // loop through object
 let shoppingCart = {

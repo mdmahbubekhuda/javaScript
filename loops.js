@@ -43,8 +43,8 @@ for (i = 10; i >= 1; i--) {
 }
 
 
-// for in loop
-let shoppingCart = {
+// for in loop (property) - only for object
+let object = {
     books: 3,
     sunglass: 1,
     keyboard: 5,
@@ -52,10 +52,16 @@ let shoppingCart = {
     pen: 25,
 };
 
-for (let keys in shoppingCart) {
-    let values = shoppingCart[keys];
+for (let keys in object) {
+    let values = object[keys];
     console.log(keys, values);
 }
 
-
+// for of loop (values) - only for array
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let sum = 0;
+for (let elements of array) {
+    sum += elements;
+}
+console.log(sum);
 
