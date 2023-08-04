@@ -85,3 +85,36 @@ function largestStringArray(arr) {
 const string = ['Rnk', 'Ronok', 'Ripa', 'Lopa'];
 const largestString = largestStringArray(string);
 console.log(largestString);
+
+// find the vowel and consonant of a string and count them separately.
+function countVowelsConsonantsWhiteSpaces(str) {
+    if(typeof str !== 'string'){
+        return 'please provide a string'
+    }
+
+    let vowelCount = 0;
+    let consonantCount = 0;
+    let otherChrCount = 0;
+    let vowelArr = [];
+    for (let chr of str) {
+        if (chr.toLowerCase() === 'a' || chr.toLowerCase() === 'e' || chr.toLowerCase() === 'i' || chr.toLowerCase() === 'o' || chr.toLowerCase() === 'u') {
+            vowelCount++;
+            vowelArr.push(chr);
+        }
+        else if (chr.toLowerCase() === ' ' || chr.toLowerCase() === ',' || chr.toLowerCase() === '.') {
+            otherChrCount++;
+        }
+        else consonantCount++;
+    }
+    let obj = {
+        vowels: vowelArr,
+        vowelsCount: vowelCount,
+        consonants: consonantCount,
+        otherCharacters: otherChrCount,
+    };
+    return obj;
+}
+
+const vowelConsonantStr = 'Lorem ipsum, dolor sit amet, adipiscing elit.';
+let returnedObj = countVowelsConsonantsWhiteSpaces(vowelConsonantStr);
+console.log(returnedObj, returnedObj.vowels);
