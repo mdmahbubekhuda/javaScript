@@ -88,7 +88,7 @@ console.log(largestString);
 
 // find the vowel and consonant of a string and count them separately.
 function countVowelsConsonantsWhiteSpaces(str) {
-    if(typeof str !== 'string'){
+    if (typeof str !== 'string') {
         return 'please provide a string'
     }
 
@@ -118,3 +118,18 @@ function countVowelsConsonantsWhiteSpaces(str) {
 const vowelConsonantStr = 'Lorem ipsum, dolor sit amet, adipiscing elit.';
 let returnedObj = countVowelsConsonantsWhiteSpaces(vowelConsonantStr);
 console.log(returnedObj, returnedObj.vowels);
+
+
+// remove duplicate from array
+function removeDuplicate(arr) {
+    const uniqueNames = [];
+    for (let elements of arr) {
+        (uniqueNames.includes(elements) === false) ? uniqueNames.push(elements) : null;
+    }
+    return uniqueNames;
+}
+
+const duplicateArray = ['ronok', 'rnk', 'ronok'];
+const uniqueNames = removeDuplicate(duplicateArray);
+console.log(uniqueNames);
+
