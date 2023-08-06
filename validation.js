@@ -19,3 +19,9 @@ function validArray(arr) {
 const array = '[1, 2, 3, 4, 5, 6, 7, 8, 9]';
 console.log(validArray(array));
 
+// Number.isInteger(value) - returns boolean
+const number = 1;
+console.log(Number.isInteger(number));
+
+// Array.isArray(value) - returns boolean
+console.log(Array.isArray(array));

@@ -54,7 +54,7 @@ console.log('Tomato price is: ' + tomatoPrice);
 let price1 = '11.67';
 
 let roundedPrice = parseInt(price1);
-let decimelPrice = parseFloat(price1);
+let decimalPrice = parseFloat(price1);
 
 // to check types of data type 
 console.log(typeof tomatoPrice);
@@ -65,7 +65,7 @@ let z = x + y;
 z = z.toFixed(2);
 z = parseFloat(z);
 
-// to assertain decimal places note: it returns string value
+// to ascertain decimal places note: it returns string value
 console.log(typeof z);
 
 // reminder use %-modulus
@@ -73,38 +73,10 @@ let a = 7;
 let b = 3;
 let reminder = a % b;
 
-// practice problem-1
-let moneyReceived = 1000;
-let moneySpent = 700;
-let shopkeeperReturned = moneyReceived - moneySpent;
+console.log(reminder);
 
-console.log(shopkeeperReturned);
 
-// practice problem-2
-let mathmatics = 75.25;
-let biology = 65;
-let chemistry = 80;
-let physics = 35.45;
-let bangla = 99.50;
 
-let totalMarks = mathmatics + biology + chemistry + physics + bangla;
-let numberOfSubjects = 5;
-let average = totalMarks / numberOfSubjects;
-average = average.toFixed(2);
-average = parseFloat(average);
-
-// console.log(typeof average);
-console.log(average);
-
-// practice problem-3
-let firstString = 'I am going to be';
-let secondString = 'an awesome web developer';
-
-console.log(firstString + ' ' + secondString);
-
-// practice problem-4
-let theNumber = 119;
-console.log(theNumber % 5);
 
 
 
