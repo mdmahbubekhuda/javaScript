@@ -1,4 +1,4 @@
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9]; //shoud be after function declaration
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9]; //should be after function declaration
 
 // sum of array
 function sumOfArray(arr) {
@@ -133,7 +133,6 @@ const duplicateArray = ['ronok', 'rnk', 'ronok'];
 const uniqueNames = removeDuplicate(duplicateArray);
 console.log(uniqueNames);
 
-// divisible
 // foobar function approach
 function foobar(num) {
     for (let i = 1; i <= num; i++) {
@@ -155,21 +154,3 @@ function foobar(num) {
 
 const foobarNum = 50;
 foobar(foobarNum);
-
-
-// foobar simple approach
-for (let i = 1; i <= 50; i++) {
-
-    if (i % 3 === 0 && i % 5 === 0) {
-        console.log('foobar');
-    }
-    else if (i % 3 === 0) {
-        console.log('foo');
-    }
-    else if (i % 5 === 0) {
-        console.log('bar');
-    }
-    else {
-        console.log(i);
-    }
-}
