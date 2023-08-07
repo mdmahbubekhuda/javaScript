@@ -62,7 +62,7 @@ const largest = largestOfArray(array);
 console.log(largest);
 
 // largest number of an array (complex)
-function largestOfArrayComlx(arr) {
+function largestOfArrayComplex(arr) {
     let largest = arr[0];
     for (let i = 1; i < arr.length; i++) {
         (arr[i] > largest) ? largest = arr[i] : null;
@@ -70,8 +70,8 @@ function largestOfArrayComlx(arr) {
     return largest;
 }
 
-const largestComlx = largestOfArrayComlx(array);
-console.log(largestComlx);
+const largestComplex = largestOfArrayComplex(array);
+console.log(largestComplex);
 
 // largest string in array (simplified)
 function largestStringArray(arr) {
@@ -106,7 +106,7 @@ function countVowelsConsonantsWhiteSpaces(str) {
         }
         else consonantCount++;
     }
-    let obj = {
+    const obj = {
         vowels: vowelArr,
         vowelsCount: vowelCount,
         consonants: consonantCount,

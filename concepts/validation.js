@@ -1,3 +1,12 @@
+// Number.isInteger(value) - returns boolean
+const number = 1;
+console.log(Number.isInteger(number));
+
+// Array.isArray(value) - returns boolean
+const array = [1, 2, 3];
+console.log(Array.isArray(array));
+
+
 // validation - number
 function validNum(x, y) {
     if (typeof x !== 'number' || typeof y !== 'number') {
@@ -16,12 +25,5 @@ function validArray(arr) {
     return 'it is an array';
 }
 
-const array = '[1, 2, 3, 4, 5, 6, 7, 8, 9]';
-console.log(validArray(array));
-
-// Number.isInteger(value) - returns boolean
-const number = 1;
-console.log(Number.isInteger(number));
-
-// Array.isArray(value) - returns boolean
-console.log(Array.isArray(array));
+const array2 = '[1, 2, 3, 4, 5, 6, 7, 8, 9]';
+console.log(validArray(array2));
