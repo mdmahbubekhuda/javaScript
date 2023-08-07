@@ -39,4 +39,51 @@ const totalPrice = pandaCost(singaraQuantity, somucaQuantity, jilapiQuantity);
 console.log(totalPrice);
 
 
-// 
+// multi layer discount 
+function ticketPrice(ticketQty) {
+
+    const first100rate = 100;
+    const second100rate = 90;
+    const restTicketsRate = 70;
+
+    if (ticketQty <= 100) {
+        const price = ticketQty * first100rate;
+        return price;
+    }
+    else if (ticketQty <= 200) {
+        const first100 = 100 * first100rate;
+        const rest = (ticketQty - 100) * second100rate;
+        const price = first100 + rest;
+        return price;
+    }
+    else {
+        const first100 = 100 * first100rate;
+        const second100 = 100 * second100rate;
+        const rest = (ticketQty - 200) * restTicketsRate;
+        const price = first100 + second100 + rest;
+        return price;
+    }
+}
+
+const ticketQty = 201;
+const totalTicketPrice = ticketPrice(ticketQty);
+console.log(totalTicketPrice);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
