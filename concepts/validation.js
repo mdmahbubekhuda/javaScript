@@ -27,3 +27,70 @@ function validArray(arr) {
 
 const array2 = '[1, 2, 3, 4, 5, 6, 7, 8, 9]';
 console.log(validArray(array2));
+
+
+// check if number is integer 
+function isInteger(num) {
+    if (typeof num !== 'number') {
+        return 'Please provide a number!'
+    }
+    else {
+        if (num % 1 !== 0) {
+            return false;
+        }
+        return true;
+    }
+}
+
+const floatNumber = 1.2;
+const checkInteger = isInteger(floatNumber);
+console.log(checkInteger);
+
+
+// check positive number
+function mindGame(num) {
+    if (!(num >= 0) || typeof num !== 'number') {
+        return 'Provide a positive number';
+    }
+    return ((((num * 3) + 10) / 2) - 5);
+}
+
+const positiveNumber = 5;
+const checkPositiveNumber = mindGame(positiveNumber);
+console.log(checkPositiveNumber);
+
+
+// check if the file is a javaScript file (string)
+function isJavaScriptFile(fileName) {
+
+    if (typeof fileName !== 'string') {
+        return 'Please provide a string';
+    }
+    // endsWith() method
+    // return (fileName.toLowerCase().endsWith('.js'));
+
+    // split() method
+    const splitArray = fileName.split('.');
+    return (splitArray.pop().toLowerCase() === 'js') ? true : false;
+}
+
+const fileName = 'rnk.js';
+const javaScriptFile = isJavaScriptFile(fileName);
+console.log(javaScriptFile);
+
+
+// finding bad data (negative numbers)
+function findingBadData(arr) {
+    let badDataCount = 0;
+    for (let element of arr) {
+        if (!Array.isArray(arr) || typeof element !== 'number') {
+            return 'provide an array containing only numbers';
+        }
+        else (element < 0) ? badDataCount++ : null;
+    }
+    return badDataCount;
+}
+
+const dataSet = [2, -5, '-7', -13];
+const checkBadData = findingBadData(dataSet);
+console.log(checkBadData);
