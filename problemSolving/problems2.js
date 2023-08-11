@@ -49,6 +49,24 @@ let number = 5;
 let factorialResult = factorial(number);
 console.log(factorialResult);
 
+// prime number - 0 & 1 cannot be prime number (look for square root method)
+function isPrime(num) {
+    if (num === 0 || num === 1) {
+        return num + 'Not a prime number';
+    } else if (num === 2) {
+        return num + ' is a prime number';
+    } else {
+        for (let i = 2; i < num; i++) {
+            if (num % i === 0) {
+                return num + ' is not a prime number';
+            }
+        }
+        return num + ' is a prime number';
+    }
+}
+const isPrimeNumber = 13;
+console.log(isPrime(isPrimeNumber));
+
 // largest number of an array (simplified)
 function largestOfArray(arr) {
     let largest = 0;

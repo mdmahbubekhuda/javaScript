@@ -48,7 +48,7 @@ else {
 // switch (faster version of if-else)
 let color = ' ';
 
-switch(color){
+switch (color) {
     case 'green':
         console.log('you are green');
         break;
@@ -64,5 +64,18 @@ switch(color){
 
 // ternary conditional operator
 let isMan = true;
-const ternary = isMan===true ? 'You are a man' : 'You are a boy';
+const ternary = isMan === true ? 'You are a man' : 'You are a boy';
 console.log(ternary);
+
+// guard clause - better readability
+function canDrink(person) {
+    if (!Object.is(person) || person.age == null) return 'You are not a person';
+    return canDrinkResponse(person.age);
+}
+function canDrinkResponse(age) {
+    if (age < 18) return 'Nope kiddo';
+    if (age < 21) return 'Not in the US';
+    return "Let's burn down the tavern";
+}
+const person = { name: 'Rnk', age: 22 };
+console.log(canDrink(person));

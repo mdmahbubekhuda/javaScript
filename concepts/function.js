@@ -57,3 +57,14 @@ function recursive(n) {
     recursive(n - 1);
 }
 recursive(3);
+
+// recursion sum
+function sumOfN(n) {
+    if (n === 1) {
+        return 1;
+    } else {
+        return n + sumOfN(n - 1);
+    }
+}
+const n = 5;
+console.log(sumOfN(n))
