@@ -1,3 +1,5 @@
-h1 {
-  color: violet;
+section {
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 2rem;
 }

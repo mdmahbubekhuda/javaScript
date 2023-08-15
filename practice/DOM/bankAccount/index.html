@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Login</title>
+    <!-- external css stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind custom properties -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- tailwind link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisyUI library -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body class="container mx-auto">
+    <header>
+      <h1 class="text-3xl text-center mt-8">
+        Welcome to
+        <span class="text-red-700 font-semibold"> Bank! </span>
+      </h1>
+    </header>
+    <main>
+      <!-- login -->
+      <section
+        class="bg-violet-100 text-3xl w-10/12 md:w-2/3 lg:w-[40%] mx-auto mt-12 p-8 space-y-8"
+      >
+        <h3 class="font-medium text-2xl text-center">Please Login</h3>
+        <section class="flex flex-col gap-8 items-center">
+          <input
+            class="p-2 text-xl w-full md:w-2/3"
+            type="email"
+            name=""
+            id="user-email"
+            placeholder="Your email"
+          />
+          <input
+            class="p-2 text-xl w-full md:w-2/3"
+            type="password"
+            name=""
+            id="user-password"
+            placeholder="Your password"
+          />
+          <button id="btn-submit" class="btn btn-neutral btn-sm md:btn-md">
+            Submit
+          </button>
+        </section>
+      </section>
+    </main>
+    <!-- external javaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
