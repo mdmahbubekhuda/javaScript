@@ -58,7 +58,8 @@ for (let liItem of liItems) {
     });
 }
 
-// delegation
+// delegation 
+// parent ul to remove child element including dynamically created ones
 const ul = document.getElementById('list-container');
 ul.addEventListener('click', function (event) {
     if (event.target.tagName === 'LI') {
@@ -66,7 +67,7 @@ ul.addEventListener('click', function (event) {
         event.stopPropagation();
     }
 })
-
+// to add li items
 document.getElementById('btn-add-item').addEventListener('click', function (event) {
     const li = document.createElement('li');
     li.innerText = 'New item added';

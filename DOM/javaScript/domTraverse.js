@@ -19,6 +19,8 @@ document.getElementsByClassName('li-class')[1].style.color = 'red';
 
 // HTML attribute
 const titleAttribute = document.getElementById('get-id');
+console.log(titleAttribute.getAttributeNames()); // returns array of string containing attribute names
+console.log(titleAttribute.getAttributeNode('class')); // returns array of string containing attribute names
 console.log(titleAttribute.getAttribute('class')); // get attribute
 console.log(titleAttribute.removeAttribute('class')); // remove attribute
 console.log(titleAttribute.setAttribute('class', 'get-class')); // set attribute
@@ -60,3 +62,6 @@ console.log(getElement.children);
 // sibling element/node
 console.log(getElement.nextElementSibling);
 console.log(getElement.previousElementSibling);
+
+// closest ancestor with specific css selector
+console.log(getElement.closest('#get-id'));

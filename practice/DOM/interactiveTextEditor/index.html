@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>textEditor</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-</head>
-<body>
-    <h1 class="text-4xl">My Text Editor</h1>
-    <section class="bg-purple-600 text-xl">
-        <div>
-            <i class="fa-solid fa-bold"></i>
-            <i class="fa-solid fa-italic"></i>
-            <i class="fa-solid fa-underline"></i>
-        </div>
-        <div>
-            <i class="fa-solid fa-align-left"></i>
-            <i class="fa-solid fa-align-center"></i>
-            <i class="fa-solid fa-align-right"></i>
-            <i class="fa-solid fa-align-justify"></i>
-        </div>
-        <div>
-            <input type="number" name="" id="">
-            <i class="fa-solid fa-font"></i>
-            <input type="color" name="" id="">
-        </div>
+    <script
+      src="https://kit.fontawesome.com/94992ccee7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-slate-500">
+    <h1 class="text-4xl text-center"><span class="text-white">Interactive</span> Text Editor</h1>
+    <section class="flex justify-between w-2/4 mx-auto my-8">
+      <div>
+        <button id="btn-1"><i class="fa-solid fa-bold"></i></button>
+        <button id="btn-2"><i class="fa-solid fa-italic"></i></button>
+        <button id="btn-3"><i class="fa-solid fa-underline"></i></button>
+      </div>
+      <div>
+        <button id="btn-4"><i class="fa-solid fa-align-left"></i></button>
+        <button id="btn-5"><i class="fa-solid fa-align-center"></i></button>
+        <button id="btn-6"><i class="fa-solid fa-align-right"></i></button>
+        <button id="btn-7"><i class="fa-solid fa-align-justify"></i></button>
+      </div>
+      <div>
+        <input class="w-10" type="number" name="" id="font-size" />
+        <button id="btn-8"><i class="fa-solid fa-font"></i></button>
+        <input type="color" name="" id="font-color" />
+      </div>
     </section>
-    
+    <section class="text-center">
+      <textarea class="p-8 w-[400px] h-[200px]" name="" id="text-area" cols="50" rows="10" placeholder="Type here..."></textarea>
+    </section>
+
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
