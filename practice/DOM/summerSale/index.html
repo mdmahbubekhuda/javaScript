@@ -56,7 +56,10 @@
 
     <main class="bg-[#F8F8F8]">
       <!-- product-section -->
-      <section class="flex gap-4 flex-col md:flex-row w-11/12 mx-auto">
+      <section
+        id="product-section"
+        class="flex gap-4 flex-col md:flex-row w-11/12 mx-auto"
+      >
         <!-- card-section -->
         <section class="w-11/12 mx-auto basis-1/2 lg:basis-2/3 mb-16">
           <!-- kitchenware -->
@@ -91,6 +94,9 @@
                 <p class="text-xl font-medium text-[#11111180]">
                   <span>39.00</span> TK
                 </p>
+                <button class="btn-add-item btn btn-secondary btn-md text-white">
+                  Add to Cart
+                </button>
               </div>
             </div>
             <!-- card-2 -->
@@ -137,6 +143,9 @@
                 <p class="text-xl font-medium text-[#11111180]">
                   <span>25.00</span> TK
                 </p>
+                <button class="btn-add-item btn btn-secondary btn-md text-white">
+                  Add to Cart
+                </button>
               </div>
             </div>
             <!-- card-3 -->
@@ -183,6 +192,9 @@
                 <p class="text-xl font-medium text-[#11111180]">
                   <span>49.00</span> TK
                 </p>
+                <button class="btn-add-item btn btn-secondary btn-md text-white">
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
@@ -219,6 +231,9 @@
                 <p class="text-xl font-medium text-[#11111180]">
                   <span>49.00</span> TK
                 </p>
+                <button class="btn-add-item btn btn-secondary btn-md text-white">
+                  Add to Cart
+                </button>
               </div>
             </div>
             <!-- card-2 -->
@@ -249,6 +264,9 @@
                 <p class="text-xl font-medium text-[#11111180]">
                   <span>69.00</span> TK
                 </p>
+                <button class="btn-add-item btn btn-secondary btn-md text-white">
+                  Add to Cart
+                </button>
               </div>
             </div>
             <!-- card-3 -->
@@ -275,10 +293,13 @@
                   <input type="radio" name="shoe" class="mask mask-star" />
                   <input type="radio" name="shoe" class="mask mask-star" />
                 </div>
-                <h2 class="card-title justify-center">Sports Cates</h2>
+                <h2 class="card-title justify-center">Sports Shoe</h2>
                 <p class="text-xl font-medium text-[#11111180]">
                   <span>159.00</span> TK
                 </p>
+                <button class="btn-add-item btn btn-secondary btn-md text-white">
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
@@ -315,6 +336,9 @@
                 <p class="text-xl font-medium text-[#11111180]">
                   <span>185.00</span> TK
                 </p>
+                <button class="btn-add-item btn btn-secondary btn-md text-white">
+                  Add to Cart
+                </button>
               </div>
             </div>
             <!-- card-2 -->
@@ -361,6 +385,9 @@
                 <p class="text-xl font-medium text-[#11111180]">
                   <span>299.00</span> TK
                 </p>
+                <button class="btn-add-item btn btn-secondary btn-md text-white">
+                  Add to Cart
+                </button>
               </div>
             </div>
             <!-- card-3 -->
@@ -391,6 +418,9 @@
                 <p class="text-xl font-medium text-[#11111180]">
                   <span>339.00</span> TK
                 </p>
+                <button class="btn-add-item btn btn-secondary btn-md text-white">
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
@@ -422,7 +452,7 @@
           <section class="bg-white p-4 rounded-lg w-full mx-auto mt-8">
             <!-- items-display -->
             <div>
-              <ul id="item-title-display" class="text-2xl"></ul>
+              <ol id="item-title-display" class="text-2xl list-decimal"></ol>
             </div>
             <br />
             <hr />
@@ -431,16 +461,16 @@
             <div>
               <ul class="text-xl font-medium">
                 <li>
-                  Total Price:
-                  <span id="total-price" class="text-[#11111180]">0.00</span> TK
+                  Sub Total:
+                  <span id="sub-total" class="text-[#11111180]">0.00</span> TK
                 </li>
                 <li>
                   Discount:
                   <span id="discount" class="text-[#11111180]">0.00</span> TK
                 </li>
                 <li>
-                  Total:
-                  <span id="total" class="text-[#11111180]">0.00</span> TK
+                  Grand Total:
+                  <span id="grand-total" class="text-[#11111180]">0.00</span> TK
                 </li>
               </ul>
             </div>
@@ -456,26 +486,26 @@
               </button>
             </div>
           </section>
+
+          <!-- modal -->
+          <dialog id="my_modal_5" class="modal modal-middle text-center">
+            <form method="dialog" class="modal-box">
+              <img class="mx-auto" src="./images/congo.png" />
+              <h3 class="font-medium text-xl">Congratulations</h3>
+              <p class="text-lg">Your Purchase is Successful</p>
+              <div class="modal-action justify-center">
+                <button
+                  id="btn-modal"
+                  class="btn btn-secondary btn-sm md:btn-md text-white"
+                >
+                  Go Home
+                </button>
+              </div>
+            </form>
+          </dialog>
         </section>
       </section>
     </main>
-
-    <!-- modal -->
-    <dialog id="my_modal_5" class="modal modal-middle text-center">
-      <form method="dialog" class="modal-box">
-        <img class="mx-auto" src="./images/congo.png" />
-        <h3 class="font-medium text-xl">Congratulations</h3>
-        <p class="text-lg">Your Purchase is Successful</p>
-        <div class="modal-action justify-center">
-          <button
-            id="btn-modal-home"
-            class="btn btn-secondary btn-sm md:btn-md text-white"
-          >
-            Go Home
-          </button>
-        </div>
-      </form>
-    </dialog>
 
     <script src="./script/main.js"></script>
   </body>
