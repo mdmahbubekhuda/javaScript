@@ -3,8 +3,8 @@ function getElementFn(selector) {
     const element = document.querySelector(selector)
     return element
 }
-// display product title
-function productNameFn(select) {
+// displays product to cart
+function productFn(select) {
     // product title
     const productTitle = select.closest('.card-body').querySelector('.card-title').innerText
     const itemDisplay = getElementFn('#item-title-display')
@@ -20,7 +20,7 @@ function productNameFn(select) {
     itemDisplay.appendChild(li)
 }
 // display prices
-function productPricesFn(select) {
+function pricesFn(select) {
 
     const productPrice = parseFloat(select.closest('.card-body').querySelector('span').innerText)
     subTotal += productPrice
@@ -42,7 +42,7 @@ function productPricesFn(select) {
 
 }
 // discount
-function productDiscountFn() {
+function discountFn() {
     const inputCoupon = getElementFn('#input-coupon')
     const discountDisplay = getElementFn('#discount')
     const grandTotalDisplay = getElementFn('#grand-total')
@@ -73,6 +73,24 @@ function resetCartFn() {
     getElementFn('#btn-coupon').setAttribute('disabled', 'true')
     getElementFn('#btn-purchase').setAttribute('disabled', 'true')
 }
+// remove item function
+function removeItem(select) {
+    const productTitle = select.parentNode.querySelector('p').innerText
+    const cardTitles = document.querySelectorAll('.card-title')
+    let price = 0
+    for (const cardTitle of cardTitles) {
+        if (productTitle === cardTitle.innerText) {
+            price = parseFloat(cardTitle.closest('.card-body').querySelector('span').innerText)
+        }
+    }
+    subTotal -= price
+    discount = 0
+    grandTotal = subTotal
+    getElementFn('#sub-total').innerText = subTotal
+    getElementFn('#discount').innerText = discount
+    getElementFn('#grand-total').innerText = grandTotal
+    select.closest('.dynamic-li').remove()
+}
 
 let subTotal = 0
 let discount = 0
@@ -82,17 +100,16 @@ document.querySelector('#product-section').addEventListener('click', function (e
     document.querySelectorAll('.btn-add-item').forEach(element => {
         if (e.target === element) {
             // title display
-            productNameFn(e.target)
+            productFn(e.target)
             // price display
-            productPricesFn(e.target)
+            pricesFn(e.target)
         }
-    });
+    })
     // coupon discount
-    if (e.target.matches('#btn-coupon')) productDiscountFn()
+    if (e.target.matches('#btn-coupon')) discountFn()
     // remove item
-    if (e.target.matches('.btn-remove')) {
-        e.target.closest('.dynamic-li').remove()
-    }
+    if (e.target.matches('.btn-remove')) removeItem(e.target)
     // reset cart
     if (e.target.matches('#btn-modal')) resetCartFn()
+
 })
