@@ -5,6 +5,13 @@
 // // function call
 // functionName();
 
+// // function expression
+// const expression = function () {
+//     console.log('functionBody');
+// }
+// // function call
+// functionName();
+
 // Four types of function are -
 // 1. parameter return;
 // 2. no parameter return;
@@ -28,6 +35,12 @@ function getAllArguments() {
     console.log(getArgumentValues);
 }
 getAllArguments(1, 2, 3, 4, 5);
+
+// default parameter
+function defaultParameter(num = 0, str = '', arr = [], obj = {}) {
+    console.log(num, str, arr, obj);
+}
+defaultParameter() // if no argument is passed default will be applied
 
 // function return
 function functionReturn(parameter1, parameter2) {
@@ -68,3 +81,20 @@ function sumOfN(n) {
 }
 const n = 5;
 console.log(sumOfN(n))
+
+// callback function - function passed as argument for another function
+function callback(sum) {
+    const result = Math.pow(sum, 2)
+    return 'callback result: ' + result
+}
+function mainFunction(a, b, callback) {
+    const sum = a + b
+    const result = callback(sum)
+    console.log('main function', result);
+}
+mainFunction(2, 3, callback) // When you pass a function as an argument, remember not to use parenthesis.
+
+// arrow function
+const arrowFn = () => 1 + 2
+console.log(arrowFn());
+

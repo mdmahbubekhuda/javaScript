@@ -42,7 +42,6 @@ for (i = 10; i >= 1; i--) {
     console.log(i);
 }
 
-
 // for in loop (property) - only for object
 let object = {
     books: 3,
@@ -51,7 +50,6 @@ let object = {
     mouse: 1,
     pen: 25,
 };
-
 for (let keys in object) {
     let values = object[keys];
     console.log(keys, values);

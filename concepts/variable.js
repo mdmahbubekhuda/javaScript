@@ -1,32 +1,11 @@
 // variable naming convention 
 // 1. can't use reserved keywords (such as, var let true etc);
-// 2. can't have whitespaces in between words - has to be a single word;
+// 2. can't have white spaces in between words - has to be a single word;
 // 3. can't have quotation;
 // 4. can't have numbers at start;
 // 5. can't use dash(-) but underscore is allowed;
 // 6. can use camelCasing, PascalCasing, snake_casing;
 // 7. variable names are case sensitive 
-
-// numeric variable
-var price = 89;
-
-// string variable
-let welcomeMessage = 'hello world';
-
-// boolean-(true or false)
-let areYouSerious = true;
-
-// undefined
-let variableWithoutValue;
-// null
-
-// operators
-let onionPrice = 20;
-let eggPrice = 10;
-let addition = onionPrice + eggPrice;
-let substraction = onionPrice - eggPrice;
-let multiplication = onionPrice * eggPrice;
-let division = onionPrice / eggPrice;
 
 // variable declaration
 let tomatoPrice = 20;
@@ -35,47 +14,43 @@ tomatoPrice = 25;
 // add to the value
 tomatoPrice = tomatoPrice + 10;
 
-// shorthand 
+// primitive type
+// numeric variable
+const price = 33;
+// string variable
+const welcomeMessage = 'hello world';
+// boolean-(true or false)
+const areYouSerious = true;
+// undefined
+let variableWithoutValue;
+// null
 
-// operation on the same variable
-tomatoPrice += 25;
-tomatoPrice -= 30;
-tomatoPrice *= 2;
-tomatoPrice /= 2;
+// non-primitive type
+// array
+const arr = [1, 'hello', true, '2']
 
-// increase or decrease value by 1
-tomatoPrice++;
-tomatoPrice--;
+// object
+const obj = {
+    // key: value,
+    name: 'Rnk',
+}
 
-// concatenate
-console.log('Tomato price is: ' + tomatoPrice);
+// variable swap - using temp variable 
+let x = 'a'
+let y = 'b'
+let z // temp variable
+z = x
+x = y
+y = z
+console.log(x, y);
 
-// parseInt & parseFloat function to convert data type
-let price1 = '11.67';
-
-let roundedPrice = parseInt(price1);
-let decimalPrice = parseFloat(price1);
-
-// to check types of data type 
-console.log(typeof tomatoPrice);
-
-let x = 0.1;
-let y = 0.2;
-let z = x + y;
-z = z.toFixed(2);
-z = parseFloat(z);
-
-// to ascertain decimal places note: it returns string value
-console.log(typeof z);
-
-// reminder use %-modulus
-let a = 7;
-let b = 3;
-let reminder = a % b;
-
-console.log(reminder);
-
-
+// variable swap only for number value
+let num1 = 1
+let num2 = 2
+num1 = num1 + num2
+num2 = num1 - num2
+num1 = num1 - num2
+console.log(num1, num2);
 
 
 

@@ -2,10 +2,20 @@
 const number = 1;
 console.log(Number.isInteger(number));
 
-// Array.isArray(value) - returns boolean
+// Number.isNaN - returns boolean
+const case1 = 123;
+const case2 = '123';
+const case3 = 'hello';
+const case4 = true;
+const case5 = undefined;
+const case6 = null;
+console.log(Number.isNaN(NaN));
+
+// Array.isArray() - returns boolean
 const array = [1, 2, 3];
 console.log(Array.isArray(array));
 
+// Object.isObject() -returns boolean
 
 // validation - number
 function validNum(x, y) {
@@ -14,7 +24,6 @@ function validNum(x, y) {
     }
     return x + y;
 }
-
 console.log(validNum(1, '2'));
 
 // validation - array
@@ -24,7 +33,6 @@ function validArray(arr) {
     }
     return 'it is an array';
 }
-
 const array2 = '[1, 2, 3, 4, 5, 6, 7, 8, 9]';
 console.log(validArray(array2));
 
@@ -41,7 +49,6 @@ function isInteger(num) {
         return true;
     }
 }
-
 const floatNumber = 1.2;
 const checkInteger = isInteger(floatNumber);
 console.log(checkInteger);
@@ -54,7 +61,6 @@ function mindGame(num) {
     }
     return ((((num * 3) + 10) / 2) - 5);
 }
-
 const positiveNumber = 5;
 const checkPositiveNumber = mindGame(positiveNumber);
 console.log(checkPositiveNumber);
@@ -73,7 +79,6 @@ function isJavaScriptFile(fileName) {
     const splitArray = fileName.split('.');
     return (splitArray.pop().toLowerCase() === 'js') ? true : false;
 }
-
 const fileName = 'rnk.js';
 const javaScriptFile = isJavaScriptFile(fileName);
 console.log(javaScriptFile);
@@ -90,7 +95,6 @@ function findingBadData(arr) {
     }
     return badDataCount;
 }
-
 const dataSet = [2, -5, '-7', -13];
 const checkBadData = findingBadData(dataSet);
 console.log(checkBadData);

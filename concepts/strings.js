@@ -1,30 +1,23 @@
 // string immutable(unchangeable) object
 let str = 'hello world';
-
-
+// concatenate
+console.log('Tomato price is: ' + tomatoPrice);
 // toLowerCase() / toUpperCase()
 console.log(str.toUpperCase());
-
 // toLocaleLowerCase() / toLocaleUpperCase() - localization in different countries
 console.log(str.toLocaleLowerCase());
-
 // slice(indexStart, indexEnd)
 console.log(str.slice(1, 4));
-
 // split(separator, limit) - '' splits every character returns array
 console.log(str.split(' '));
-
 // join(separator) - (, - . - ' ' - '' - / - a) - needs an array
 const arr = ['Rnk', 'Ronok'];
 console.log(arr.join('-'));
-
 // concat(value0, value1, /* … ,*/ valueN) - requires array creates new array
 const arr2 = ['lopa', 'ripa'];
 console.log(arr.concat(arr2));
-
 // substring(indexStart, indexEnd)
 console.log(str.substring(0, 4));
-
 // indexOf(searchElement, fromIndex) - fromIndex is optional
 console.log(str.indexOf('e'));
 
@@ -33,17 +26,13 @@ console.log(str.indexOf('e'));
 
 // startsWith(searchString, position) - returns true/false
 console.log(str.startsWith('hello'));
-
 // endsWith(searchString, position) - returns true/false
 console.log(str.endsWith('hello'));
-
 // includes(searchString, position) position is optional defaults to 0s
 console.log(str.includes('world'));
-
 // trim() / trimStart() / trimEnd() - removes whiteSpaces
 const str1 = ' hello world ';
 console.log(str1.trimEnd());
-
 // string reverse
 function strReverse(str) {
     let output = '';
