@@ -73,7 +73,7 @@ function resetCartFn() {
     getElementFn('#btn-coupon').setAttribute('disabled', 'true')
     getElementFn('#btn-purchase').setAttribute('disabled', 'true')
 }
-// remove item function
+// remove item function - need to fix it
 function removeItem(select) {
     const productTitle = select.parentNode.querySelector('p').innerText
     const cardTitles = document.querySelectorAll('.card-title')
