@@ -12,12 +12,14 @@ console.log(work);
 
 // array destructure
 const arr = [1, 2, 3]
-const [x, y, z] = arr // can use directly [x, y, z] = [1, 2, 3]
-console.log(y);
+const [x, y, z] = arr
+// can also be used
+const [a, b, c] = [1, 2, 3]
+console.log(x, a);
 
 // function to destructure
 function doubleIt(a, b) {
     return [a * 2, b * 2]
 }
 const [num1, num2] = doubleIt(2, 3)
-console.log(num1);
+console.log(num1, num2);

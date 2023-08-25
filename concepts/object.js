@@ -68,8 +68,3 @@ console.log(newObj);
 Object.freeze(newObj)
 delete newObj.e
 console.log(newObj);
-
-
-
-
-

@@ -63,3 +63,8 @@ for (let elements of array) {
 }
 console.log(sum);
 
+// forEach - array>loops>callback>no return 
+arr.forEach(element => {
+    element * 2
+});
+

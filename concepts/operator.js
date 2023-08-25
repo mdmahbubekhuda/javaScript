@@ -28,17 +28,18 @@ if (variable1 === 1 || variable2 === 1) console.log('either condition is true');
 // ternary (?) - evaluates true or false
 const x = 2;
 (x === 2) ? console.log('true') : console.log('false')
+// optional chaining (?) - used for error checking (Cannot read properties of undefined (reading 'zxcv'))
+const obj = { name: 'Rnk', age: 35, height: "6'", interest: 'software engineering' }
+console.log(obj.asdf?.zxcv);
 
 // spread (...) - used for array and objects - returns the values
 const arr = [11, 22, 333, 44, 55]
 // spread - passing an array as arguments
 const maxNum = Math.max(...arr) // returns array values
 console.log(maxNum);
-
 // spread - to copy
 const arr2 = [1, ...arr, 2]
 console.log(arr2);
-
 // spread - to merge
 const arr3 = [...arr, ...arr2]
 console.log(arr3);

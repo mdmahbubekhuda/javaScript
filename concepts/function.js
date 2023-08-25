@@ -63,21 +63,16 @@ console.log(returnMultiValues());
 
 // recursive function - function that calls itself
 function recursive(n) {
-    if (n <= 0) {
-        return 'Recursive end';
-    }
+    if (n === 0) return 'Recursive end'
     console.log('Recursion:', n);
-    recursive(n - 1);
+    return recursive(n - 1);
 }
-recursive(3);
+console.log(recursive(3))
 
 // recursion sum
 function sumOfN(n) {
-    if (n === 1) {
-        return 1;
-    } else {
-        return n + sumOfN(n - 1);
-    }
+    if (n === 1) return 1
+    return n + sumOfN(n - 1)
 }
 const n = 5;
 console.log(sumOfN(n))
@@ -92,7 +87,8 @@ function mainFunction(a, b, callback) {
     const result = callback(sum)
     console.log('main function', result);
 }
-mainFunction(2, 3, callback) // When you pass a function as an argument, remember not to use parenthesis.
+// When you pass a function as an argument, remember not to use parenthesis"()"
+mainFunction(2, 3, callback)
 
 // arrow function
 const arrowFn = () => 1 + 2
