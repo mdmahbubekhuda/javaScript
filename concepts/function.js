@@ -77,20 +77,34 @@ function sumOfN(n) {
 const n = 5;
 console.log(sumOfN(n))
 
-// callback function - function passed as argument for another function
-function callback(sum) {
-    const result = Math.pow(sum, 2)
-    return 'callback result: ' + result
-}
-function mainFunction(a, b, callback) {
-    const sum = a + b
-    const result = callback(sum)
-    console.log('main function', result);
-}
-// When you pass a function as an argument, remember not to use parenthesis"()"
-mainFunction(2, 3, callback)
-
 // arrow function
 const arrowFn = () => 1 + 2
 console.log(arrowFn());
 
+// 'arguments' keyword - returns an array like object
+function getAllArguments() {
+    const args = [...arguments]
+    for (const arg of args) {
+        console.log('args:', arg);
+    }
+}
+getAllArguments(1, 2, 3, 4, 5)
+console.log(getAllArguments.length); // returns argument length
+
+/* callback - function passed as argument for another function */
+
+// callback - 1
+function morning(name) {
+    console.log('Good morning,', name);
+}
+// callback - 2
+function night(name) {
+    console.log('Good night,', name);
+}
+// main function
+function greetings(name = 'Rnk', callback) {
+    callback(name)
+}
+// When you pass a function as an argument, remember not to use parenthesis"()"
+greetings('Mahbub', morning)
+greetings('Ronok', night)

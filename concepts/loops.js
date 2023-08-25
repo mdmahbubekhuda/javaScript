@@ -28,7 +28,7 @@ for (let i = 0; i < firstNames.length; i++) {
     console.log('stops at rnk - ', elementName);
 }
 
-// continue - skips / continue loop
+// continue - skips condition and continue loop
 for (i = 0; i < firstNames.length; i++) {
     let elementName = firstNames[i];
     if (elementName == 'rnk') {
@@ -63,8 +63,5 @@ for (let elements of array) {
 }
 console.log(sum);
 
-// forEach - array>loops>callback>no return 
-arr.forEach(element => {
-    element * 2
-});
+
 
