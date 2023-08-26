@@ -1,7 +1,7 @@
 // string immutable(unchangeable) object
 let str = 'hello world';
 // concatenate
-console.log('Tomato price is: ' + tomatoPrice);
+console.log('My first program: ' + str);
 // toLowerCase() / toUpperCase()
 console.log(str.toUpperCase());
 // toLocaleLowerCase() / toLocaleUpperCase() - localization in different countries
@@ -61,3 +61,6 @@ const str3 = 'hello world! Lately, you are being ruthless';
 const outputWordReverse = strWordReverse(str3);
 console.log(outputWordReverse);
 
+// template literals combined with map and join methods
+const arrStr = ['Ronok', 'Rnk']
+console.log(`Hello my name: ${arrStr.map(element => element).join(' aka ')}`);

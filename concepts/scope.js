@@ -1,7 +1,7 @@
 /*scope
-global scope
-function scope
-block scope
+global scope - x = 123 or variable declared on global space
+function scope - function () {}
+block scope - {}
 */
 
 // hoisting - var only declaration part not the value

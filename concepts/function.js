@@ -108,3 +108,31 @@ function greetings(name = 'Rnk', callback) {
 // When you pass a function as an argument, remember not to use parenthesis"()"
 greetings('Mahbub', morning)
 greetings('Ronok', night)
+
+
+// closure - inner function has access to outer function variables as well as global variables
+function count() {
+    let count = 0
+    return () => count++
+}
+const counter1 = count() // call function using the variable
+const counter2 = count() // call function using the variable
+console.log('counter1', counter1());
+console.log('counter1', counter1());
+console.log('counter2', counter2());
+console.log('counter2', counter2());
+console.log('counter1', counter1());
+console.log('counter1', counter1());
+console.log('counter1', counter1());
+console.log('counter2', counter2());
+console.log('counter2', counter2());
+console.log('counter1', counter1());
+// each time the function is called it creates its own instance that has its own private variable
+
+/**
+ * closure - A closure is formed when a nested function (inner function) has access to the variables of its containing function (outer function), even after the outer function has finished executing. This means that the inner function 'closes over' the variables of the outer function, giving it the ability to use those variables even outside the context of the outer function.
+ * 
+ * encapsulation - is a programming principle that involves bundling data (variables) and the methods (functions) that operate on the data into a single unit, often referred to as an 'object' or a 'module'. The key idea is to hide the internal implementation details and expose only a controlled interface for interacting with the data and methods. This promotes data privacy, prevents unintended modifications, and allows for better organization of code.
+ * 
+ * private variables - are variables that are not directly accessible from the scope they are defined. They are hidden from external access to prevent unintended modifications and to provide better control over how the data is used. In javaScript closures are often used to create private variables within functions.
+ */

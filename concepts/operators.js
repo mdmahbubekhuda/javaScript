@@ -32,13 +32,16 @@ const x = 2;
 const obj = { name: 'Rnk', age: 35, height: "6'", interest: 'software engineering' }
 console.log(obj.asdf?.zxcv);
 
-// spread (...) - used for array and objects - returns the values
+// spread (...) - for array and object - returns the values - solves reference issue
 const arr = [11, 22, 333, 44, 55]
 // spread - passing an array as arguments
 const maxNum = Math.max(...arr) // returns array values
 console.log(maxNum);
 // spread - to copy
-const arr2 = [1, ...arr, 2]
+const [j, l, ...rest] = [1, 2, 3, 4, 5] // creates new array that solves reference issue
+console.log(j, l, rest);
+// spread - to copy with added
+const arr2 = [1, ...arr, 2] // creates new array that solves reference issue
 console.log(arr2);
 // spread - to merge
 const arr3 = [...arr, ...arr2]
