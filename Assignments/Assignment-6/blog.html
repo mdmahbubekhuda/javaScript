@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <style>
+      body {
+        font-size: large;
+        text-align: justify;
+        width: 80%;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Variable Scope -->
+    <section>
+      <h1 class="text-2xl">Variable Scope - (Var, Let, Const)</h1>
+      <p>Simply, a Scope is an area of execution - where a piece of code is executed. 
+        <ul>Generally, there are 3 types of Scope :
+          <li>Global Scope - variables declared within the global context</li>
+          <li>Functional Scope - variables declared within a functional</li>
+          <li>Block Scope - variables declared with the curly braces '{}'</li>
+        </ul>  
+      </p>
+      <h2>Var</h2>
+      <p>Variables declared with 'var' keyword have function or global scope depending on where they are declared. As they are not block-level scoped, they are accessible and mutable (liable to change) from outside of the block in which they are declared. This can lead to some unexpected behaviors.</p>
+      <h2>Let & Const</h2>
+      Variables declared with both 'Let' and 'Const' keyword are block scope, meaning they are only accessible within the scope and not from outside. One key difference between the two is value assigned with Let keyword is mutable, whereas Const is not. Although, variables declared with Const, such as non-primitive data types (array, object etc.) can still be modified but can not be reassigned.
+      <p></p>
+    </section>
+    <!-- Use cases of null and undefined -->
+    <section>
+      <h1>Use cases of null and undefined</h1>
+      <h2>null</h2>
+      <p>In javaScript the null keyword represents a falsy data type. This means that during conditional statement executions null coercion to false. Null is a primitive data type and represents a object. Although, initially it was a mistake by the creators of javaScript language but fixing it now may cause many web-sites to crash.</p>
+      <ul>Some common use cases of null
+        <li>Initialization - null is used to initialize variables before assigning a specific value.</li>
+        <li>Default Value - in cases where variable may or may not have a value, it can serve as a default value</li>
+        <li>Error Handling - function or methods may return null to indicate an error in code</li>
+        <li>Testing and Debugging - intentionally setting value to null for testing purposes</li>
+      </ul>
+      <h2>undefined</h2>
+      <p>In javaScript, undefined represents the absence of a value or the absence of a variable assignment. It is a primitive-data type.</p>
+      <ul>Common cases of undefined
+        <li>Variable declared but value not assigned</li>
+        <li>Function parameter is not passed</li>
+        <li>Trying to access missing object properties</li>
+        <li>Function that doesn't have a return statement</li>
+        <li>Accessing an array with an index that doesn't exist</li>
+        <li>Explicitly checking a variable for undefined</li>
+      </ul>
+    </section>
+    <!-- REST API -->
+    <section>
+      <h1>REST API</h1>
+      <p>REST (Representational State Transfer) and API (Application Programming Interface) is a set of rules for building and interacting with web services. It is based on principles of REST, that uses standard HTTP/HTTPs methods (GET, POST, PUT, DELETE, PATCH) to perform CRUD (Create, Read, Update, Delete) operations on resources, and representing resources as URLs (Universal Resource Locator).
+
+      <p>When a client makes a request for resources through REST API (also known as RESTful API), it transfers a representation a representation of the state of the resource to the client. This information or representation is delivered via one of the several HTTP formats. These includes: JSON, HTML, XLT, Python, PHP, or plaintext. JSON (JavaScript Object Notation) being the popular due to its readability by both humans and machines.</p>
+      
+      <ul>HTTP/HTTPs Methods
+        <li>GET- Retrieves data from server</li>
+        <li>POST - Create new resource on server</li>
+        <li>PUT - Updates existing resource on server</li>
+        <li>DELETE - Removes an existing resource from server</li>
+        <li>PATCH - If resource exist on server then updates it or if doesn't exist then creates it</li>
+      </ul>
+
+      <ul>Common HTTP Status Codes
+        <li>200 (OK)</li>
+        <li>201 (Created)</li>
+        <li>204 (No Content)</li>
+        <li>400 (Bad Request)</li>
+        <li>404 (Not Found)</li>
+        <li>500 (Internal Server Error)</li>
+      </ul>
+      </p>
+    </section>
+  </body>
+</html>
