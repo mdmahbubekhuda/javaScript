@@ -17,9 +17,7 @@ console.log(Array.isArray(array));
 
 // validation - object
 function validObject(obj) {
-    return (typeof obj === 'object'
-        && obj !== null
-        && !Array.isArray(obj))
+    return (typeof obj === 'object' && obj !== null && !Array.isArray(obj))
         ? 'is a object'
         : 'is not a object'
 }
